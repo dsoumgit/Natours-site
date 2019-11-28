@@ -103,3 +103,4 @@ This note keeps the technique and strategy when start building the pages:
             - low resolution (ex. desktop) 
             - high resolution (ex. iphone, mac)
         ~ Art Direction: use completely different image     
+        
