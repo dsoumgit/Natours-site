@@ -1,0 +1,105 @@
+************ Remember ***************
+This note keeps the technique and strategy when start building the pages: 
+    
+* Perform reset in CSS 
+* For both heading and subheading, we use span tag to divide the two
+        and display them as block-level element because it occupies the 
+        entire space of its parent element.       
+* Three Pillars of Writing Good HTML and CSS:         
+    1. Responsive Design 
+        - Fluid layouts
+        - Media queries 
+        - Responsive images
+        - Correct units 
+        - Desktop-first vs mobile-first 
+    2. Maintainable and Scalable code 
+        - Write clean code
+        - Easy to understand 
+        - Growth 
+        - Reusable 
+        - How to organize files 
+        - How to name classes 
+        - How to structure HTML 
+    3. Web Performance 
+        - Make it faster and smaller in size 
+        - Less HTTP requests 
+        - Less code and compress code 
+        - Use a CSS preprocessor 
+        - Less images 
+        - Compress images 
+        - Only use images that are necessary
+
+* Unit concepts in CSS:
+    - Browsers specify a root font-size for each page (usually 16px)
+    - Percentages and relative values are always converted to pixels 
+    - Percentages are measured relative to their parent's font-size, if used to specify font-size
+    - Percentages are measured relative to their parent's width, if used to specify lengths
+    - em are measured relative to their parent font-size, if used to specify font-size
+    - em are measured relative to the current font-size, if used to specify lengths
+    - rem are always measured relative to the document's root font-size 
+    - vh and vw are simply percentage measurements of the viewport's height and width 
+
+* The Box Model: 
+    - Start with margin --> border --> padding --> element 
+    - Find Total Width and Height of an element: 
+        - total width = right border + right padding + specified width + left padding + left border
+        - total height = top border + top padding + specified height + bottom padding + bottom border   
+
+* Basic Responsive Design Principles: 
+    1. Fluid Grids and Layouts : uses % rather than px for all layout-related lengths
+    2. Flexible/Responsive Images : also uses % to be responsive 
+    3. Media Queries
+
+* Three Layout Types: 
+    1. Float Layout
+    2. Flexbox 
+    3. CSS Grid 
+
+* 'About' section slide: 
+    - Thinking about components
+    - How and why to use utility classes
+    - How to use the background-clip property 
+    - How to transform multiple properties simultaneously
+    - How to use the outline-offset property together with outline
+    - How to style elements that are NOT hoevered while others are    
+
+* 'Feature' section slide:
+    - How to include and use an icon font
+    - Another way of creating the 'skewed section' design 
+    - How and when to use the direct child selector 
+
+* 'Popular Tours' section slide:
+    - How to build rotating card
+    - How to use 'perspective' in CSS
+    - How to use 'backface-visibility' property 
+    - Using background blend modes 
+    - How and when to use 'box-decoration-break'
+    
+* 'Customer Comment' section slide:
+    - How to make text flow around shapes with 'shape-outside' and 'float'
+    - How to apply a filter to images
+    - How to create a background video covering an entire section 
+    - How to use the <video> HTML element
+    - How and when to use the 'object-fit' property
+
+* 'Booking' section slide: 
+    - How to implement 'solid-color gradients'
+    - How the general and adjacent sibling selectors work and why we need them 
+    - How to use the ::input-placeholder pseudo-element 
+    - How and when to use the :focus :invalid, placeholder-shown and :checked pseudo-classes 
+    - techniques to build custom radio buttons 
+* 'Menu' section slide: 
+    - What the 'checkbox hack' is and how it works 
+    - How to create custom animation timing functions using cubic bezier curves 
+    - How to animate 'solid-color gradients' 
+    - How and why to use 'transform-origin'
+
+* Responsive Images:
+    - The goal of responsive images is to serve the right image to the right screen size and device,
+        in order to aviod downloading unnecessary large images on smaller screens. 
+    - The 3 use cases when to use responsive images:
+        ~ Resolution Switching: serving large screen with the same image but smaller version for the device 
+        ~ Density Switching:
+            - low resolution (ex. desktop) 
+            - high resolution (ex. iphone, mac)
+        ~ Art Direction: use completely different image     
