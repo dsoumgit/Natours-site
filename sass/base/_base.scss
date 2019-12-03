@@ -14,7 +14,10 @@
 
 /* Change to rem relative unit */
 html {
-    /* 1rem is 10px so it is the root font size and easy to replace with rem. */
+    /* 
+       Note: Default size for all modern browsers is 16px. So here we reduce the entire
+        document to 62.5% which is 10px. See calculation below.
+        1rem is 10px so it is the root font size and easy to replace with rem. */
     font-size: 62.5%;   // 1rem = 10px; 10px/16px = 62.5% 
 
     @include respond(tab-land) { // width < 900

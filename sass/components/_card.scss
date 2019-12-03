@@ -14,6 +14,8 @@
         top: 0;
         left: 0;
         width: 100%;
+        // prefix version 
+        -webkit-backface-visibility: hidden;
         backface-visibility: hidden;    // hide the back part of the element
         border-radius: 3px;
         box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
@@ -162,11 +164,14 @@
 
 
     // show the back of the card in the front on small devices 
-    @include respond(tab-port) {
-        height: auto;  
-        border-radius: 3px;
-        background-color: $color-white;
-        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+  //  @include respond(tab-port) {
+      @media only screen and (max-width: 56.25em),
+      // and touch device 
+        only screen and  (hover:none) { 
+            height: auto;  
+            border-radius: 3px;
+            background-color: $color-white;
+            box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
 
         &__side {
             height: auto; 

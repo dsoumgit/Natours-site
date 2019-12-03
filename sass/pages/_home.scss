@@ -24,6 +24,7 @@
     // skew entire section 
     transform: skewY(-7deg);    
 
+
     @include respond(tab-port) {
         padding: 10rem 0; 
     }

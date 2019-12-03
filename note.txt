@@ -38,6 +38,20 @@ This note keeps the technique and strategy when start building the pages:
     - em are measured relative to the current font-size, if used to specify lengths
     - rem are always measured relative to the document's root font-size 
     - vh and vw are simply percentage measurements of the viewport's height and width 
+    * Relative Units:
+        - Relative length units specify a length relative to another length property
+            ~ em: the current font-size
+            ~ vw: relative to 1% of the width of the viewport 
+            ~ vh: relative to 1% of the height of the viewport 
+            ~ %: relative to the parent element 
+            ~ ex: the x-height of the current font 
+        - it scales better between different rendering mediums     
+    * Absolute Units:
+        - mainly useful when the output environment is known 
+        - units consist of in, cm, mm, pt, pc and the px unit   
+        - should be used for print media and similar high resolution devices 
+        - on-screen display such as desktop and lower-resolution devices are 
+            recommended to use the pixel or em units.    
 
 * The Box Model: 
     - Start with margin --> border --> padding --> element 

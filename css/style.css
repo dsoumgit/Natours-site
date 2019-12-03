@@ -27,15 +27,18 @@ Note:
 
 /* Change to rem relative unit */
 html {
-  /* 1rem is 10px so it is the root font size and easy to replace with rem. */
+  /* 
+       Note: Default size for all modern browsers is 16px. So here we reduce the entire
+        document to 62.5% which is 10px. See calculation below.
+        1rem is 10px so it is the root font size and easy to replace with rem. */
   font-size: 62.5%; }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     html {
       font-size: 56.25%; } }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     html {
       font-size: 50%; } }
-  @media (min-width: 112.5em) {
+  @media only screen and (min-width: 112.5em) {
     html {
       font-size: 75%; } }
 
@@ -43,7 +46,7 @@ body {
   box-sizing: border-box;
   padding: 3rem;
   /* 30px divide by 10px to get the rem */ }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     body {
       padding: 0; } }
 
@@ -106,7 +109,7 @@ body {
     animation-name: moveInLeft;
     animation-duration: 2s;
     animation-timing-function: ease-out; }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .heading-primary--main {
         letter-spacing: 1rem;
         font-family: 5rem; } }
@@ -118,7 +121,7 @@ body {
     animation-name: moveInRight;
     animation-duration: 1s;
     animation-timing-function: ease-in; }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .heading-primary--sub {
         letter-spacing: .3rem; } }
 
@@ -133,10 +136,10 @@ body {
   color: transparent;
   letter-spacing: 2px;
   transition: all .2s; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .heading-secondary {
       font-size: 2.5rem; } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .heading-secondary {
       font-size: 2rem; } }
   .heading-secondary:hover {
@@ -250,7 +253,7 @@ body {
     z-index: 10;
     transition: all .2s;
     outline-offset: 1rem; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .composition__photo {
         float: left;
         position: relative;
@@ -259,14 +262,14 @@ body {
     .composition__photo--p1 {
       left: 0;
       top: 0; }
-      @media (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .composition__photo--p1 {
           top: 0;
           transform: scale(1.2); } }
     .composition__photo--p2 {
       right: 0;
       top: 2rem; }
-      @media (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .composition__photo--p2 {
           top: -1rem;
           transform: scale(1.3);
@@ -274,7 +277,7 @@ body {
     .composition__photo--p3 {
       left: 20%;
       top: 10rem; }
-      @media (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .composition__photo--p3 {
           top: 1rem;
           left: 0;
@@ -295,7 +298,7 @@ body {
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   transition: transform .3s; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .feature-box {
       padding: 2rem; } }
   .feature-box__icon {
@@ -307,7 +310,7 @@ body {
     -webkit-background-clip: text;
     display: inline-block;
     color: transparent; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .feature-box__icon {
         padding: 0; } }
   .feature-box:hover {
@@ -327,6 +330,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
+    -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
@@ -407,7 +411,7 @@ body {
   .card__price-value {
     font-size: 6rem;
     font-weight: 100; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em), only screen and (hover: none) {
     .card {
       height: auto;
       border-radius: 3px;
@@ -448,12 +452,12 @@ body {
   transform: skewX(-12deg); }
   .story > * {
     transform: skewX(12deg); }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .story {
       width: 100%;
       padding: 4rem;
       padding-left: 7rem; } }
-  @media (max-width: 37.5em) {
+  @media only screen and (max-width: 37.5em) {
     .story {
       transform: skewX(0);
       margin-bottom: 0; } }
@@ -468,7 +472,7 @@ body {
     -webkit-clip-path: circle(50% at 50% 50%);
     transform: translateX(-3rem) skewX(12deg);
     position: relative; }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .story__shape {
         transform: translateX(-3rem) skewX(0); } }
   .story__img {
@@ -478,7 +482,7 @@ body {
     transition: all .5s; }
   .story__text {
     transform: skewX(12deg); }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .story__text {
         transform: skewX(0); } }
   .story__caption {
@@ -493,7 +497,7 @@ body {
     opacity: 0;
     backface-visibility: hidden;
     transition: all .5s; }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .story__caption {
         transform: translate(0); } }
   .story:hover .story__caption {
@@ -533,7 +537,7 @@ body {
   width: 90%;
   display: block;
   transition: all .3s; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .form__input {
       width: 100%; } }
   .form__input:focus {
@@ -561,7 +565,7 @@ body {
 .form__radio-group {
   width: 49%;
   display: inline-block; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .form__radio-group {
       width: 100%;
       margin-bottom: 1.5rem; } }
@@ -612,6 +616,9 @@ body {
   opacity: 0;
   visibility: hidden;
   transition: all .3s;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.3);
   /* Note: The left and right width makes up 100% */ }
   .popup:target {
     opacity: 1;
@@ -645,10 +652,10 @@ body {
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.5);
     transition: all .4s .2s; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .popup__content {
         width: 100%; } }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .popup__content {
         width: 100%;
         display: block;
@@ -656,10 +663,10 @@ body {
   .popup__left {
     width: 33.333333%;
     display: table-cell; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .popup__left {
         width: 50%; } }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .popup__left {
         width: 100%;
         display: block; } }
@@ -668,10 +675,10 @@ body {
     display: table-cell;
     vertical-align: middle;
     padding: 3rem 5rem; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .popup__right {
         width: 50%; } }
-    @media (max-width: 37.5em) {
+    @media only screen and (max-width: 37.5em) {
       .popup__right {
         width: 100%;
         display: block; } }
@@ -691,7 +698,7 @@ body {
     -moz-hyphens: auto;
     -ms-hyphens: auto;
     -webkit-hyphens: auto; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .popup__text {
         width: 100%;
         column-count: 2; } }
@@ -714,7 +721,7 @@ body {
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
     text-align: center;
     cursor: pointer; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .navigation__button {
         top: 6rem;
         right: 5.7rem; } }
@@ -813,7 +820,7 @@ body {
         - Color is going from left to right bottom. 
         - Change opacity using rgba(red, green, blue, opacity)
     */
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg");
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero-small.jpg");
   background-size: cover;
   /* the image always try to fit the viewport as you resize it */
   background-position: top;
@@ -826,7 +833,10 @@ body {
         We need to substract 50% of the width and height to align the element in 
             the center using translate(-50%, -50%) to reposition the element.
     */ }
-  @media (max-width: 37.5em) {
+  @media (min-resolution: 192dpi) and (min-width: 37.5em), (min-width: 125em) {
+    .header {
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url("../img/hero.jpg"); } }
+  @media only screen and (max-width: 37.5em) {
     .header {
       clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
       -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
@@ -851,10 +861,10 @@ body {
   margin: 0 auto; }
   .row:not(:last-child) {
     margin-bottom: 8rem; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .row:not(:last-child) {
         margin-bottom: 6rem; } }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .row {
       max-width: 50rem;
       padding: 0 3rem; } }
@@ -866,11 +876,11 @@ body {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
-      @media (max-width: 56.25em) {
+      @media only screen and (max-width: 56.25em) {
         .row [class^="col-"]:not(:last-child) {
           margin-right: 0;
           margin-bottom: 6rem; } }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .row [class^="col-"] {
         width: 100% !important; } }
   .row .col-1-of-2 {
@@ -890,7 +900,7 @@ body {
   background-color: #333;
   padding: 10rem 0;
   font-size: 1.4rem; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .footer {
       padding: 8rem 0; } }
   .footer__logo-box {
@@ -903,7 +913,7 @@ body {
     border-top: 1px solid #777;
     padding-top: 2rem;
     display: inline-block; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .footer__navigation {
         width: 100%;
         text-align: center; } }
@@ -926,7 +936,7 @@ body {
     border-top: 1px solid #777;
     padding-top: 2rem;
     color: #fff; }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .footer__copyright {
         width: 100%;
         text-align: center;
@@ -936,7 +946,7 @@ body {
   background-color: #f7f7f7;
   padding: 20rem 0;
   margin-top: -20vh; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .section-about {
       padding: 20rem 0; } }
 
@@ -946,7 +956,7 @@ body {
   background-size: cover;
   margin-top: -10rem;
   transform: skewY(-7deg); }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .section-features {
       padding: 10rem 0; } }
   .section-features > * {
@@ -956,24 +966,24 @@ body {
   background-color: #f7f7f7;
   padding: 25rem 0 15rem 0;
   margin-top: -10rem; }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .section-tours {
       padding: 15rem 0 10rem 0; } }
 
 .section-stories {
   position: relative;
   padding: 15rem 0; }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     .section-stories {
       padding: 2rem 0; } }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .section-stories {
       padding: 1rem 0; } }
 
 .section-book {
   padding: 15rem 0;
   background-image: linear-gradient(to right bottom, #7ed56f, #28b485); }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .section-book {
       padding: 10rem 0; } }
 
@@ -982,20 +992,20 @@ body {
   background-size: cover;
   border-radius: 3px;
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); }
-  @media (max-width: 75em) {
+  @media only screen and (max-width: 75em) {
     .book {
       background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 65%, transparent 70%), url(../img/nat-10.jpg);
       background-size: cover; } }
-  @media (max-width: 56.25em) {
+  @media only screen and (max-width: 56.25em) {
     .book {
       background-image: linear-gradient(to right, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%, transparent 100%), url(../img/nat-10.jpg);
       background-size: cover; } }
   .book__form {
     width: 50%;
     padding: 6rem; }
-    @media (max-width: 75em) {
+    @media only screen and (max-width: 75em) {
       .book__form {
         width: 65%; } }
-    @media (max-width: 56.25em) {
+    @media only screen and (max-width: 56.25em) {
       .book__form {
         width: 100%; } }
